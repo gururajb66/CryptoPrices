@@ -77,4 +77,8 @@ s.end(temp+" "+price.data.currency);
 
 });*/
 
-app.listen("8080",function(){console.log("Listeining on port 8080")});
+//app.listen("8080",function(){console.log("Listeining on port 8080")});
+const server = app.listen(process.env.PORT||"8080",function(){
+	const port = server.address().port;
+	console.log("Emp App is listening on "+port);
+	});
